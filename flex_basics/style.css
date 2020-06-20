@@ -1,0 +1,91 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  background: rgb(13, 20, 56);
+  background: radial-gradient(
+    circle,
+    rgb(28, 39, 94) 0%,
+    rgb(241, 100, 128) 100%
+  );
+}
+
+.container {
+  display: flex;
+  width: 70vw;
+  justify-content: space-between;
+  height: 70vh;
+}
+
+.col1 {
+  background: rgb(135, 207, 40);
+}
+.col2 {
+  background: rgb(21, 62, 196);
+}
+.col3 {
+  background: rgb(175, 37, 218);
+}
+.col4 {
+  background: rgb(15, 184, 29);
+}
+.col5 {
+  background: rgb(245, 126, 126);
+}
+.col6 {
+  background: rgb(255, 236, 28);
+}
+.col7 {
+  background: rgb(1, 150, 187);
+}
+.col8 {
+  background: rgb(107, 31, 54);
+}
+
+.col {
+  border: 3px solid #fff;
+  color: #333;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col4 {
+  flex: 1;
+}
+
+.col3 {
+  align-self: center;
+  flex: 1;
+  flex-basis: 300px;
+}
+.col2 {
+  flex-shrink: 2;
+}
+
+@media (max-width: 960px) {
+  .container {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+}
