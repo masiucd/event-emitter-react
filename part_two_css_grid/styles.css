@@ -46,3 +46,8 @@ body {
   grid-row: 3 / span 4;
   grid-column: 1/ span 2;
 }
+
+.col10 {
+  grid-column: 1 / -1;
+  grid-row: 8 / -1;
+}
