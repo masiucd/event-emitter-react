@@ -1,0 +1,101 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  color: #333;
+}
+
+
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template: auto / 150px repeat(4, 1fr);
+}
+
+
+.side-nav {
+  background: #1C2938;
+  grid-row: 1 / -1;
+  color: #fff;
+
+}
+
+.top-btns,
+.bottom-btns {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bottom-btns {
+  justify-content: flex-end;
+  height: 50%;
+  margin-top: auto;
+}
+
+.bottom-btns span,
+.top-btns span {
+  font-size: 2rem;
+  margin: 1rem 0;
+  padding: .4rem;
+  cursor: pointer;
+}
+
+
+.col {
+  border: 2px solid #1C2938;
+  overflow-y: scroll;
+}
+
+.col-header {
+  padding: 1rem;
+  box-shadow: 2px 1px 3px #1C2938;
+}
+
+.col-header h4 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.col-header h4>span {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+
+.content {
+  padding: 1.5rem 2rem;
+  border: 1px solid rgb(199, 199, 199);
+}
+
+.content h3 {
+  font-size: 3rem;
+  padding: .5rem 0;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+#avatar {}
+
+#avatar img {
+  border: 2px solid #005FD1;
+  border-radius: 50%;
+}

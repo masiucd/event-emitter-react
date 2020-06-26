@@ -1,0 +1,153 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  grid-template: 58px 1fr 200px 100px / auto;
+  display: grid;
+}
+
+nav {
+  grid-area: 1 / 1 / 2 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.9);
+
+}
+
+.nav-title {
+
+  transition: all 1s ease;
+  color: #fff;
+  font-size: 2em;
+}
+
+nav:hover .nav-title {}
+
+
+.nav__list {
+  transform: translateX(1000%);
+  transition: all 1s ease;
+}
+
+nav:hover .nav__list {
+  transform: translateX(0%);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+nav>ul>li>a {
+  padding: 1rem;
+
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+  background: #333;
+}
+
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-area: 2 / 1 / -1 / -1;
+}
+
+.video-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  /* Start at row 2 start at col 1 end at row 3 end at col -1 */
+  grid-area: 2 / 1 / 3 / -1;
+  align-self: center;
+
+  z-index: 100;
+  padding: 2rem 12rem;
+  color: #fff;
+}
+
+
+main h1 {
+  font-size: 3em;
+  padding: 2rem 0;
+}
+
+main h3 {
+  font-size: 2em;
+  padding: 2rem 0;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+
+footer>ul {
+  padding: 2rem 0;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+button {
+  padding: .4rem .8rem;
+  font-size: 2rem;
+  background: transparent;
+  color: #fff;
+  width: 14em;
+  border: 1px solid #fff;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.9);
+}
