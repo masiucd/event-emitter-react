@@ -1,0 +1,99 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+}
+
+
+.grid {
+  display: grid;
+  width: 1000px;
+  grid-template-columns: 300px 1fr 1fr;
+  grid-template-areas:
+    "pro a  b"
+    "pro x x"
+    "pro x x"
+    "long long long"
+    "long long long";
+  ;
+  /* grid-template-rows: 300px 1fr 100px auto; */
+  grid-gap: 15px;
+  align-self: center;
+}
+
+
+.col {
+  background: #333;
+  color: #fff;
+  font-size: 3em;
+  box-shadow: 2px 3px 2px 1px #ccc;
+  padding: 1em;
+  border-radius: 1rem;
+}
+
+.col p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.col p>span {
+  color: steelblue;
+  font-style: italic;
+  border-bottom: 3px solid #fff;
+}
+
+.col h3 {
+  border-bottom: 2px solid steelblue;
+  margin-bottom: 2rem;
+}
+
+.col1 {
+  grid-area: pro;
+}
+
+.col10 {
+  grid-area: long;
+}
+
+.col2 {
+  grid-area: a;
+
+}
+
+.col3 {
+  grid-area: b;
+
+}
+
+
+@media(max-width: 960px) {
+  .grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+      "pro pro"
+      "pro pro"
+      "a b"
+      "long long"
+      "long long";
+  }
+
+  .col {}
+}
