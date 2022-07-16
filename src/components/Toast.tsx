@@ -30,11 +30,12 @@ const ToastContainer: FC = () => {
     <AnimatePresence>
       {isActive && (
         <motion.div
-          initial={{opacity: 0, y: 1000}}
-          animate={{opacity: 1, y: 0}}
-          exit={{opacity: 0, y: 1000}}
+          className="bg-slate-200 p-4 rounded-md shadow-lg absolute"
+          initial={{opacity: 0, y: 1000, x: 1000}}
+          animate={{opacity: 1, y: 100, x: 400}}
+          exit={{opacity: 0, y: 1000, x: 1000}}
         >
-          {text}
+          <p className=" text-2xl">{text}</p>
         </motion.div>
       )}
     </AnimatePresence>
